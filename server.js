@@ -19,6 +19,9 @@ connectDB();
 //rest object
 const app = express();
 
+// Get __dirname using import.meta.url
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+
 //middleware
 app.use(cors());
 app.use(express.json());

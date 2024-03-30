@@ -1,0 +1,238 @@
+2023-10-30 08:17:04,193 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     CONTAINER_REQUEST_COUNT: 0
+2023-10-30 08:17:04,193 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     Fetching me assessment
+2023-10-30 08:17:04,193 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     ME Assessment fetched - {'meId': 'ME_DSA_LEVEL3_MOCK10', 'stages': [<BuildStageType.BUILD_STAGE_TYPE_SETUP: 'setup'>, <BuildStageType.BUILD_STAGE_TYPE_COMPILATION: 'compilation'>, <BuildStageType.BUILD_STAGE_TYPE_UNIT_TESTING: 'unitTesting'>], 'assessmentEndpoint': 'https://me-dsa-level3-mock10-prod-nnjjst7g5q-uc.a.run.app/', 'fargateTaskDefinition': None, 'meFolder': 'me_ps_ds', 'runInIsolation': False}
+2023-10-30 08:17:04,193 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     Starting assessment
+2023-10-30 08:17:04,705 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     Running assessment stage setup
+2023-10-30 08:17:04,706 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     {'buildId': 'dd406b4a-a07a-4da3-af8f-c8df845de2e2', 'userId': 'kaustubhumbarkar36', 'cohortId': 'COHORT_ME_DSA_LEVEL3_MOCK10_ENROLL_1666417633848', 'meId': 'ME_DSA_LEVEL3_MOCK10', 'moduleId': 'ME_DSA_LEVEL3_MOCK10_MODULE_MOCKSORTCOLORS', 'buildType': 'BUILD_TYPE_SUBMIT', 'assessmentType': 'ASSESSMENT_TYPE_TIMED', 'questionId': 'QUESTION_MockSortColors', 'psDsContext': {'codeId': 54246460, 'inputs': [], 'codeData': {'code': 'import java.io.*;\nimport java.util.*;\n\nclass MockSortColors {\n    public void sortColors(int[] nums) {\n    if(nums.length==0)return;\n    int low=0;\n     int high = nums.length-1;\n     int mid=0;\n     while(mid<=high){\n         if(nums[mid]==0){\n             int temp = nums[mid];\n             nums[mid] = nums[low];\n             nums[low] = temp;\n             low++;  mid++;\n         }\n         else if(nums[mid]==1){\n             mid++;\n         }else{\n             int temp =nums[mid];\n             nums[mid] = nums[high];\n             nums[high] = temp;\n             high--;\n         }\n     }    \n        }\n\n\n\n\n    \n\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        int n = scanner.nextInt();\n        int nums[] = new int[n];\n        for (int i = 0; i < n; i++)\n            nums[i] = scanner.nextInt();\n        scanner.close();\n\n        MockSortColors result = new MockSortColors();\n        result.sortColors(nums);\n        for (int i = 0; i < nums.length; i++)\n            System.out.printf("%d ", nums[i]);\n    }\n}\n/* \nCrio Methodology\n\nMilestone 1: Understand the problem clearly\n1. Ask questions & clarify the problem statement clearly.\n2. Take an example or two to confirm your understanding of the input/output\n\nMilestone 2: Finalize approach & execution plan\n1. Understand what type of problem you are solving and see if you can recollect solving similar problems in the past\n      a. Obvious logic (this would only test ability to convert logic to code)\n      b. Figuring out logic\n      c. Knowledge of specific algorithm, data structure or pattern\n      d. Knowledge of specific domain or concepts\n      e. Mapping real world into abstract concepts/data structures\n2. Brainstorm multiple ways to solve the problem and pick one based on the TC/SC requirements\n3. Get to a point where you can explain your approach to a 10 year old\n\nMilestone 3 : Come up with an Instruction Manual for a 10 year old\n1. Take a stab at the high-level logic & write it down like a detailed Instruction Manual for a 10 Year old where each line of the manual can be expanded into a logical line(s) of code.\n2. Try to offload logic out of the main section as much as possible by delegating to functions.\n\nMilestone 4: Code by expanding your 10 Year Olds "Instruction Manual\n1. Run your code snippets at every logical step to test correctness (Helps avoid debugging larger pieces of code later)\n2. Make sure you name the variables, functions clearly.\n3. Use libraries as much as possible\n\nMilestone 5: Prove that your code works using custom test cases\n1. Make sure you check boundary conditions and other test cases you noted in Milestone 1\n      a. If compiler is not available, dry run your code on a whiteboard or paper\n2. Suggest optimizations if applicable during interviews\n*/', 'languageType': 'LANGUAGE_TYPE_JAVA'}}, 'timestampInMs': 1698653823992, 'meAssessment': {'meId': 'ME_DSA_LEVEL3_MOCK10', 'stages': [<BuildStageType.BUILD_STAGE_TYPE_SETUP: 'setup'>, <BuildStageType.BUILD_STAGE_TYPE_COMPILATION: 'compilation'>, <BuildStageType.BUILD_STAGE_TYPE_UNIT_TESTING: 'unitTesting'>], 'assessmentEndpoint': 'https://me-dsa-level3-mock10-prod-nnjjst7g5q-uc.a.run.app/', 'fargateTaskDefinition': None, 'meFolder': 'me_ps_ds', 'runInIsolation': False}, 'workingDir': '//kaustubhumbarkar36-ME_DSA_LEVEL3_MOCK10-dd406b4a-a07a-4da3-af8f-c8df845de2e2'}
+2023-10-30 08:17:04,706 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     Getting user data...
+2023-10-30 08:17:04,706 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+Received user data in 2.7894973754882812e-05 seconds
+
+2023-10-30 08:17:04,706 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     Getting crio data...
+2023-10-30 08:17:04,744 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+Received and unzipped crio data in 0.037515878677368164 seconds
+
+2023-10-30 08:17:04,744 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+Setup stage completed in 0.03893160820007324 seconds.
+
+2023-10-30 08:17:04,744 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     BuildStageType.BUILD_STAGE_TYPE_SETUP stage complete. Report: {'testsDir': '//kaustubhumbarkar36-ME_DSA_LEVEL3_MOCK10-dd406b4a-a07a-4da3-af8f-c8df845de2e2/tests', 'userDir': '//kaustubhumbarkar36-ME_DSA_LEVEL3_MOCK10-dd406b4a-a07a-4da3-af8f-c8df845de2e2/user', 'solutionDir': '//kaustubhumbarkar36-ME_DSA_LEVEL3_MOCK10-dd406b4a-a07a-4da3-af8f-c8df845de2e2/solution', 'moduleName': 'MockSortColors', 'language': 'java', 'solutionLanguage': 'javascript'}
+2023-10-30 08:17:05,256 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     Running assessment stage compilation
+2023-10-30 08:17:05,257 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     User code compilation started
+2023-10-30 08:17:05,257 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     Compiling code...
+2023-10-30 08:17:06,302 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     Compilation complete!
+2023-10-30 08:17:06,303 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     Compilation finished in 1.0431523323059082 seconds
+2023-10-30 08:17:06,303 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+Compilation stage completed in 1.0464136600494385 seconds.
+
+2023-10-30 08:17:06,304 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     BuildStageType.BUILD_STAGE_TYPE_COMPILATION stage complete. Report: {'compilationStatus': 'success'}
+2023-10-30 08:17:06,826 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     Running assessment stage unitTesting
+2023-10-30 08:17:06,827 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     List of tests: [['sample-input-1.txt', 'sample-output-1.txt'], ['base-input-1.txt', 'base-input-10.txt', 'base-input-2.txt', 'base-input-3.txt', 'base-input-4.txt', 'base-input-5.txt', 'base-input-6.txt', 'base-input-7.txt', 'base-input-8.txt', 'base-input-9.txt', 'base-output-1.txt', 'base-output-10.txt', 'base-output-2.txt', 'base-output-3.txt', 'base-output-4.txt', 'base-output-5.txt', 'base-output-6.txt', 'base-output-7.txt', 'base-output-8.txt', 'base-output-9.txt'], ['edge-input-1.txt', 'edge-input-2.txt', 'edge-input-3.txt', 'edge-input-4.txt', 'edge-input-5.txt', 'edge-input-6.txt', 'edge-output-1.txt', 'edge-output-2.txt', 'edge-output-3.txt', 'edge-output-4.txt', 'edge-output-5.txt', 'edge-output-6.txt'], ['perf-input-1.txt', 'perf-input-10.txt', 'perf-input-11.txt', 'perf-input-2.txt', 'perf-input-3.txt', 'perf-input-4.txt', 'perf-input-5.txt', 'perf-input-6.txt', 'perf-input-7.txt', 'perf-input-8.txt', 'perf-input-9.txt', 'perf-output-1.txt', 'perf-output-10.txt', 'perf-output-11.txt', 'perf-output-2.txt', 'perf-output-3.txt', 'perf-output-4.txt', 'perf-output-5.txt', 'perf-output-6.txt', 'perf-output-7.txt', 'perf-output-8.txt', 'perf-output-9.txt']]
+2023-10-30 08:17:06,827 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     Running tests...
+2023-10-30 08:17:07,260 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 0.4205172061920166 seconds
+2023-10-30 08:17:07,597 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     sample-input-1.txt : SUCCESS
+2023-10-30 08:17:08,408 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 1.2861428260803223 seconds
+2023-10-30 08:17:08,444 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 1.5108067989349365 seconds
+2023-10-30 08:17:08,461 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 1.377835988998413 seconds
+2023-10-30 08:17:08,464 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     base-input-10.txt : SUCCESS
+2023-10-30 08:17:08,647 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 1.3722386360168457 seconds
+2023-10-30 08:17:08,660 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 1.8010742664337158 seconds
+2023-10-30 08:17:08,674 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     base-input-2.txt : SUCCESS
+2023-10-30 08:17:08,886 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 1.897298812866211 seconds
+2023-10-30 08:17:09,093 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     base-input-4.txt : SUCCESS
+2023-10-30 08:17:09,096 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 1.4309487342834473 seconds
+2023-10-30 08:17:09,302 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     base-input-5.txt : SUCCESS
+2023-10-30 08:17:09,339 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     base-input-1.txt : SUCCESS
+2023-10-30 08:17:10,078 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     base-input-6.txt : SUCCESS
+2023-10-30 08:17:10,079 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 1.1895577907562256 seconds
+2023-10-30 08:17:10,402 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 2.6228201389312744 seconds
+2023-10-30 08:17:10,418 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 1.9229788780212402 seconds
+2023-10-30 08:17:10,415 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 1.280017614364624 seconds
+2023-10-30 08:17:10,435 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     edge-input-2.txt : SUCCESS
+2023-10-30 08:17:10,422 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     base-input-3.txt : SUCCESS
+2023-10-30 08:17:10,423 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     edge-input-1.txt : SUCCESS
+2023-10-30 08:17:10,433 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     base-input-9.txt : SUCCESS
+2023-10-30 08:17:10,419 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 1.7757678031921387 seconds
+2023-10-30 08:17:10,441 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     base-input-8.txt : SUCCESS
+2023-10-30 08:17:10,436 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     base-input-7.txt : SUCCESS
+2023-10-30 08:17:10,471 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 1.119889736175537 seconds
+2023-10-30 08:17:10,473 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     edge-input-3.txt : SUCCESS
+2023-10-30 08:17:10,534 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 0.6951794624328613 seconds
+2023-10-30 08:17:10,535 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     edge-input-4.txt : SUCCESS
+2023-10-30 08:17:10,615 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 0.8182740211486816 seconds
+2023-10-30 08:17:10,616 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     edge-input-6.txt : SUCCESS
+2023-10-30 08:17:10,679 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 0.3794853687286377 seconds
+2023-10-30 08:17:10,680 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     edge-input-5.txt : SUCCESS
+2023-10-30 08:17:21,150 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 ERROR    TimeoutExpired for perf-test-10
+2023-10-30 08:17:21,151 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 10.433992624282837 seconds
+2023-10-30 08:17:21,151 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     perf-input-10.txt : TIMEOUT
+2023-10-30 08:17:21,464 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 ERROR    TimeoutExpired for perf-test-1
+2023-10-30 08:17:21,466 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 ERROR    TimeoutExpired for perf-test-11
+2023-10-30 08:17:21,468 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 ERROR    TimeoutExpired for perf-test-2
+2023-10-30 08:17:21,470 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 10.771731853485107 seconds
+2023-10-30 08:17:21,471 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     perf-input-1.txt : TIMEOUT
+2023-10-30 08:17:21,468 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 ERROR    TimeoutExpired for perf-test-3
+2023-10-30 08:17:21,633 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 10.697158813476562 seconds
+2023-10-30 08:17:21,653 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     perf-input-11.txt : TIMEOUT
+2023-10-30 08:17:21,865 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 10.677130937576294 seconds
+2023-10-30 08:17:21,888 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 ERROR    TimeoutExpired for perf-test-4
+2023-10-30 08:17:21,896 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 10.954787492752075 seconds
+2023-10-30 08:17:21,897 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     perf-input-4.txt : TIMEOUT
+2023-10-30 08:17:21,896 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     perf-input-2.txt : TIMEOUT
+2023-10-30 08:17:21,906 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 10.618772268295288 seconds
+2023-10-30 08:17:21,906 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     perf-input-3.txt : TIMEOUT
+2023-10-30 08:17:22,633 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 ERROR    TimeoutExpired for perf-test-5
+2023-10-30 08:17:22,633 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 11.361698389053345 seconds
+2023-10-30 08:17:22,634 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     perf-input-5.txt : TIMEOUT
+2023-10-30 08:17:23,342 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 ERROR    TimeoutExpired for perf-test-6
+2023-10-30 08:17:23,344 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 11.48209547996521 seconds
+2023-10-30 08:17:23,344 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     perf-input-6.txt : TIMEOUT
+2023-10-30 08:17:26,401 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 4.924467325210571 seconds
+2023-10-30 08:17:26,407 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     perf-input-8.txt : SUCCESS
+2023-10-30 08:17:26,489 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 5.337399959564209 seconds
+2023-10-30 08:17:26,494 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     perf-input-7.txt : SUCCESS
+2023-10-30 08:17:26,505 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Time taken for the user code : 4.848794460296631 seconds
+2023-10-30 08:17:26,509 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     perf-input-9.txt : SUCCESS
+2023-10-30 08:17:26,518 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+
+Total time taken for all tests case: 0 seconds.
+2023-10-30 08:17:26,518 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+Average time taken for 1 test case: 0.0 seconds.
+2023-10-30 08:17:26,518 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+Unittesting stage completed in 19.69136929512024 seconds.
+
+2023-10-30 08:17:26,519 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     BuildStageType.BUILD_STAGE_TYPE_UNIT_TESTING stage complete. Report: {'sample-test-1': 'TEST_STATUS_SUCCESS', 'base-test-2': 'TEST_STATUS_SUCCESS', 'base-test-10': 'TEST_STATUS_SUCCESS', 'base-test-4': 'TEST_STATUS_SUCCESS', 'base-test-5': 'TEST_STATUS_SUCCESS', 'base-test-1': 'TEST_STATUS_SUCCESS', 'base-test-6': 'TEST_STATUS_SUCCESS', 'edge-test-2': 'TEST_STATUS_SUCCESS', 'base-test-3': 'TEST_STATUS_SUCCESS', 'edge-test-1': 'TEST_STATUS_SUCCESS', 'base-test-9': 'TEST_STATUS_SUCCESS', 'base-test-8': 'TEST_STATUS_SUCCESS', 'base-test-7': 'TEST_STATUS_SUCCESS', 'edge-test-3': 'TEST_STATUS_SUCCESS', 'edge-test-4': 'TEST_STATUS_SUCCESS', 'edge-test-6': 'TEST_STATUS_SUCCESS', 'edge-test-5': 'TEST_STATUS_SUCCESS', 'perf-test-10': 'TEST_STATUS_FAILURE', 'perf-test-1': 'TEST_STATUS_FAILURE', 'perf-test-11': 'TEST_STATUS_FAILURE', 'perf-test-4': 'TEST_STATUS_FAILURE', 'perf-test-2': 'TEST_STATUS_FAILURE', 'perf-test-3': 'TEST_STATUS_FAILURE', 'perf-test-5': 'TEST_STATUS_FAILURE', 'perf-test-6': 'TEST_STATUS_FAILURE', 'perf-test-8': 'TEST_STATUS_SUCCESS', 'perf-test-7': 'TEST_STATUS_SUCCESS', 'perf-test-9': 'TEST_STATUS_SUCCESS'}
+2023-10-30 08:17:26,550 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     Found bucket assessment-build-logs-prod
+2023-10-30 08:17:26,956 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     
+Files from stages uploaded in 0.4063429832458496 seconds
+
+2023-10-30 08:17:26,957 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     Build Report formed:
+2023-10-30 08:17:26,957 build-dd406b4a-a07a-4da3-af8f-c8df845de2e2 INFO     {
+    "buildId": "dd406b4a-a07a-4da3-af8f-c8df845de2e2",
+    "userId": "kaustubhumbarkar36",
+    "meId": "ME_DSA_LEVEL3_MOCK10",
+    "cohortId": "COHORT_ME_DSA_LEVEL3_MOCK10_ENROLL_1666417633848",
+    "buildType": "BUILD_TYPE_SUBMIT",
+    "questionId": "QUESTION_MockSortColors",
+    "stages": [
+        {
+            "type": "BUILD_STAGE_TYPE_SETUP",
+            "status": "BUILD_STAGE_STATUS_SUCCESS",
+            "feedback": null,
+            "report": {
+                "testsDir": "//kaustubhumbarkar36-ME_DSA_LEVEL3_MOCK10-dd406b4a-a07a-4da3-af8f-c8df845de2e2/tests",
+                "userDir": "//kaustubhumbarkar36-ME_DSA_LEVEL3_MOCK10-dd406b4a-a07a-4da3-af8f-c8df845de2e2/user",
+                "solutionDir": "//kaustubhumbarkar36-ME_DSA_LEVEL3_MOCK10-dd406b4a-a07a-4da3-af8f-c8df845de2e2/solution",
+                "moduleName": "MockSortColors",
+                "language": "java",
+                "solutionLanguage": "javascript"
+            },
+            "logPath": "https://storage.googleapis.com/assessment-build-logs-prod/kaustubhumbarkar36-ME_DSA_LEVEL3_MOCK10/build-dd406b4a-a07a-4da3-af8f-c8df845de2e2/setup.log?Expires=1730189846&GoogleAccessId=storage-service%40crio-prod.iam.gserviceaccount.com&Signature=iPn%2F6v5lFsMa0E2yDrZeaec%2FefUCDtrv20CNWzzdnYw3PjngqVzHnDC3pZQv55oq07E%2FMe7ww0XULm5w4LgphW%2F5gBgBRG6bIaJFkSr%2Ff%2Bq6T3UY9UzmyjVKqTZBSQ9ShuYVM%2FLbErPMzbJc1WfKACTbQp%2FAQGgeQi6o0QmFnO9Qawxm9FGZnBq%2F3Vw3AauIZWcz0t%2BBmderAZdAJV%2B27X3c%2Bh5H5ZAHyxpdyoeVkWAS6nF1rAjtiw8DoZ5gcatP%2FBCKTdsUn359Y9kbAQwrBUQ74mZ6VU4nHGfH7EPb3pIghhfaQ8SkzV78KUILAraDZYey%2B0t%2FRh8ieVmOILCHTQ%3D%3D"
+        },
+        {
+            "type": "BUILD_STAGE_TYPE_COMPILATION",
+            "status": "BUILD_STAGE_STATUS_SUCCESS",
+            "feedback": null,
+            "report": {
+                "compilationStatus": "success"
+            },
+            "logPath": "https://storage.googleapis.com/assessment-build-logs-prod/kaustubhumbarkar36-ME_DSA_LEVEL3_MOCK10/build-dd406b4a-a07a-4da3-af8f-c8df845de2e2/compilation.log?Expires=1730189846&GoogleAccessId=storage-service%40crio-prod.iam.gserviceaccount.com&Signature=aFJ8rUwVXuVrKWLXSsuuNBAttKxn8oMtwBzBNwDylVSb%2BhhLwHdgZTJAd3KH6Rp5cpD84wfHpfF8w6kFlEWvgiwbewjl1Jr3M5AHvvkzj6WFfI9jWvkpxLtkEUpWCUUG9iA2GvwJSCzhUHZtZiFnQnoPDnUQjhdKSz0PSYoSj09%2FsWIMdHrTbJvt%2Bhn1aO%2BPLLFTuVHAEXqMVXH5%2BfO4meZc8rujNYASK8AySdUEWE7N6CE1nSwWumwmchDD7ksdp9qLd20jUSnZoY8pTYte9EHIJbAi4CvSA7do3eDdYScCBz24U%2FNMkyqqVFzldHwuch%2Ft2x8HgmMmP4wxu9GgJQ%3D%3D"
+        },
+        {
+            "type": "BUILD_STAGE_TYPE_UNIT_TESTING",
+            "status": "BUILD_STAGE_STATUS_SUCCESS",
+            "feedback": null,
+            "report": {
+                "sample-test-1": "TEST_STATUS_SUCCESS",
+                "base-test-2": "TEST_STATUS_SUCCESS",
+                "base-test-10": "TEST_STATUS_SUCCESS",
+                "base-test-4": "TEST_STATUS_SUCCESS",
+                "base-test-5": "TEST_STATUS_SUCCESS",
+                "base-test-1": "TEST_STATUS_SUCCESS",
+                "base-test-6": "TEST_STATUS_SUCCESS",
+                "edge-test-2": "TEST_STATUS_SUCCESS",
+                "base-test-3": "TEST_STATUS_SUCCESS",
+                "edge-test-1": "TEST_STATUS_SUCCESS",
+                "base-test-9": "TEST_STATUS_SUCCESS",
+                "base-test-8": "TEST_STATUS_SUCCESS",
+                "base-test-7": "TEST_STATUS_SUCCESS",
+                "edge-test-3": "TEST_STATUS_SUCCESS",
+                "edge-test-4": "TEST_STATUS_SUCCESS",
+                "edge-test-6": "TEST_STATUS_SUCCESS",
+                "edge-test-5": "TEST_STATUS_SUCCESS",
+                "perf-test-10": "TEST_STATUS_FAILURE",
+                "perf-test-1": "TEST_STATUS_FAILURE",
+                "perf-test-11": "TEST_STATUS_FAILURE",
+                "perf-test-4": "TEST_STATUS_FAILURE",
+                "perf-test-2": "TEST_STATUS_FAILURE",
+                "perf-test-3": "TEST_STATUS_FAILURE",
+                "perf-test-5": "TEST_STATUS_FAILURE",
+                "perf-test-6": "TEST_STATUS_FAILURE",
+                "perf-test-8": "TEST_STATUS_SUCCESS",
+                "perf-test-7": "TEST_STATUS_SUCCESS",
+                "perf-test-9": "TEST_STATUS_SUCCESS"
+            },
+            "logPath": "https://storage.googleapis.com/assessment-build-logs-prod/kaustubhumbarkar36-ME_DSA_LEVEL3_MOCK10/build-dd406b4a-a07a-4da3-af8f-c8df845de2e2/unitTesting.log?Expires=1730189846&GoogleAccessId=storage-service%40crio-prod.iam.gserviceaccount.com&Signature=jFT7mIAODWcg69AHbytBqSwuRCa1ohJih%2FcKqnUntWQP2K0Ps0nvABNzxa1a%2FrfPHhDUFc5APW7TAy4spkVFl6j47HtzOJx77ktq7DNfjExX0cl8G%2F7ju8SFdnM%2BEIPwQyvgPEFhWgsBpqhslXCzv4IDQfaEVsso%2F8NUDkpcx1rUhy2i2GebOqnoA5Vj5jhRbFvt0%2FZ1zNb6%2FHyfaV9f21DJ3DM%2BCKpdrue6JOShsx%2Fhpz4JYCLE1F8xQ46OoZ9TJw5Xxm21gQZ97u9pGyJaUrX3C2F%2Fk83wosbYsZePd52TjUmiDaszEod9BJKlk4hncuCD8Xk2AW9i%2FobMIxU8bg%3D%3D"
+        }
+    ],
+    "codeId": 54246460,
+    "buildStatus": "BUILD_STATUS_SUCCESS",
+    "moduleId": "ME_DSA_LEVEL3_MOCK10_MODULE_MOCKSORTCOLORS",
+    "buildDurationInMs": 22763,
+    "timestampInMs": 1698653846957
+}

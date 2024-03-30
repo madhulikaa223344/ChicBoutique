@@ -46,16 +46,16 @@ const Login = () => {
   return (
     <Layout title="Register - Ecommer App">
      
-      <div className="form-container" style={{ minHeight: "90vh" }}>
-      <img
+      <div className="form-container" style={{width: '100%', height: '78vh'}}>
+      {/* <img
           src="/images/backgrounf.jpg"
           alt="contactus"
           style={{ width: "100%" }}
-        />
-        <form onSubmit={(e)=>handleSubmit(e)}>  
+        /> */}
+        <form onSubmit={(e)=>handleSubmit(e)} className="row" style={{ width: "80%" ,maxWidth:"400px" }}>  
         {/* we need to pass here using arrow function as we are passing e  as an argument*/ }
           <h4 className="title">LOGIN FORM</h4>
-          <div className="mb-3">
+          <div className="mb-3 col-md-12">
             <input
               type="email"
               value={email}
@@ -66,7 +66,7 @@ const Login = () => {
               required
             />
           </div>
-          <div className="mb-3">
+          <div className="mb-3 col-md-12">
             <input
               type="password"
               value={password}
@@ -77,7 +77,7 @@ const Login = () => {
               required
             />
           </div>
-          <div className="mb-3">
+          <div className="mb-3 col-md-12">
             <button
               type="button"
               className="btn forgot-btn"
@@ -88,7 +88,7 @@ const Login = () => {
               Forgot Password
             </button>
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary col-md-12">
             LOGIN
           </button>
         </form>

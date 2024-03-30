@@ -5,7 +5,6 @@ import { requireSignIn,isAdmin} from "../middlewares/authmiddleware.js"
 //router object
 const router = Express.Router();
 
-
 //routings 
 //REGISTER||METHOD POST
 router.post("/register", registerController);

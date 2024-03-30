@@ -13,6 +13,7 @@
   
   .home-page {
     margin-top: 0%;
+    margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
@@ -39,6 +40,7 @@
     border-bottom-right-radius: 5px;
     font-size: 14px;
     font-weight: bold;
+    
   }
   
   .home-page .card-text {
@@ -59,10 +61,11 @@
     margin-top: 100px;
     color: gray !important;
     border-bottom: 1px solid rgba(128, 128, 128, 0.337);
+    padding-left: 10px !important;
   }
   
   .ant-checkbox-wrapper:first-of-type {
-    margin-left: 8px;
+    margin-left: 2px;
   }
   
   .ant-checkbox-wrapper {
@@ -78,6 +81,7 @@
     width: 100%;
     border: none;
     border-radius: 0;
+    padding-left: 10px;
     margin-top: 20px;
   }
   
@@ -85,4 +89,13 @@
     color: green;
     font-weight: bold;
     font-size: 20px !important;
+  }
+  .moredetails {
+    background-color: rgb(65,93,104)!important;
+    border: 0cm !important;
+  }
+  .heading {
+    color: rgba(20, 16, 16, 0.178);
+    padding-top: 5px !important;
+
   }

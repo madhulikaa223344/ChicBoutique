@@ -39,20 +39,27 @@ const Register = () => {
       toast.error("Something went wrong");
     }
   };
+  const img="/images/background.jpg";
 
   return (
     <Layout title="Register - Ecommer App">
      
-      <div className="form-container" style={{ minHeight: "90vh" }}>
-      <img
-          src="/images/backgrounf.jpg"
+      <div className="form-container " 
+      // style={{
+      //   backgroundImage: `url(${img})`, //"url('./images/bg2.jpg')",
+      //   backgroundSize: "cover",
+      //   //backgroundColor: ''opacity:0.5 // Ensures the background covers the div
+      // }}
+      >
+      {/* <img
+          src=""
           alt="contactus"
           style={{ width: "100%" }}
-        />
-        <form onSubmit={(e)=>handleSubmit(e)}>  
+        /> */}
+        <form onSubmit={(e)=>handleSubmit(e) } className="row w-10" style={{ width: "80%" , maxWidth:"400px" }}>  
         {/* we need to pass here using arrow function as we are passing e  as an argument*/ }
           <h4 className="title">REGISTER FORM</h4>
-          <div className="mb-3">
+          <div className="mb-3 col-md-12  ">
             <input
               type="text"
               value={name}
@@ -64,7 +71,7 @@ const Register = () => {
               autoFocus
             />
           </div>
-          <div className="mb-3">
+          <div className="mb-3 col-md-12">
             <input
               type="email"
               value={email}
@@ -75,7 +82,7 @@ const Register = () => {
               required
             />
           </div>
-          <div className="mb-3">
+          <div className="mb-3 col-md-12">
             <input
               type="password"
               value={password}
@@ -86,7 +93,7 @@ const Register = () => {
               required
             />
           </div>
-          <div className="mb-3">
+          <div className="mb-3 col-md-12">
             <input
               type="text"
               value={phone}
@@ -97,7 +104,7 @@ const Register = () => {
               required
             />
           </div>
-          <div className="mb-3">
+          <div className="mb-3 col-md-12">
             <input
               type="text"
               value={address}
@@ -108,7 +115,7 @@ const Register = () => {
               required
             />
           </div>
-          <div className="mb-3">
+          <div className="mb-3 col-md-12">
             <input
               type="text"
               value={answer}
@@ -119,7 +126,7 @@ const Register = () => {
               required
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary ">
             REGISTER
           </button>
         </form>

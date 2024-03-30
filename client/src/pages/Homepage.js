@@ -161,8 +161,8 @@ const HomePage = () => {
             </button>
           </div>
         </div>
-        <div className="col-md-9 ">
-          <h1 className="text-center">All Products</h1>
+        <div className="col-md-9 p-25">
+        <h2 className="text-center heading">ALL PRODUCTS</h2>
           <div className="d-flex flex-wrap">
             {products?.map((p) => (
               <div className="card m-2" key={p._id}>
@@ -186,7 +186,7 @@ const HomePage = () => {
                   </p>
                   <div className="card-name-price">
                     <button
-                      className="btn btn-info ms-1"
+                      className="btn btn-info ms-1 moredetails"
                       onClick={() => navigate(`/product/${p.slug}`)}
                     >
                       More Details
@@ -194,7 +194,7 @@ const HomePage = () => {
                     <button
                       className="btn btn-dark ms-1"
                       onClick={() => {
-                        console.log("hello")
+          
                         setCart([...cart, p]);
                         localStorage.setItem(
                           "cart",
